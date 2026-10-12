@@ -1,5 +1,13 @@
 # Project Plan
 
+## Overview
+
+This project aims to explore how inflation and unemployment rate are associated with changes to consumer spending trends for food and retails goods. Particularly, this project will inspect inflation through the lens of changing price points for common and routine consumer purchases via the consumer price index and along with employment rates attempt to analyze whether these economic indicators provide insight to spending behaviors in the retail and food category.   
+
+To research the relationship between these variables, three publicly accessible datasets hosted by government entities including the Federal Reserve Economic Data (FRED), U.S. Census Bureau, and Bureau of Labor Statistics will be used. These datasets provide monthly insights on the consumer price index, retail and food spending, and the civilian unemployment rate. The datasets acquired from these reputable sources will be documented, assessed for quality and missing values, and cleaned. The datasets will then be filtered to a chosen common time period and then be analyzed to study correlation or relationship between these economic indicators. The seasonal adjustment factors will also be analyzed to explore how this relationship between metrics may vary across routine time periods.
+
+The main objective is to produce a sound workflow for extracting, processing, integrating, and analyzing economic data from multiple government platforms to better understand how consumer spending habits vary in differing economic conditions. 
+
 ## 1. Research Question
 
 **Main Research Question:**
@@ -28,12 +36,15 @@ We will use the following three datasets to investigate the relationship between
 ## 2b. Dataset Descriptions
 
 Dataset 1: Consumer Price Index for All Urban Consumers (CPIAUCSL)
+
 This dataset contains the monthly consumer price index focused particularly on consumers living in metropolitan areas in the United States. The consumer price index provided the weighted average price changes to a set of consumer goods and services that are expected purchases for American households across lifetimes. It is a measure for evaluating the change of expenses and possibly strain that American consumers face in differing economic conditions. This dataset is from the Federal Reserve Economic Data site published and maintained by the Federal Reserve Bank of St. Louis. It is available through CSV format or direct access via API. There are two primary fields in this dataset: DATE and CPIAUCSL. The date is presented in the standard YYYY-MM-DD format and the CPI (consumer price index) are floats (numbers including decimals). The base prices for the CPI are drawn from 1982-1984. 
 
 Dataset 2: Monthly Retail Trade Survey (MRTS)
+
 This dataset contains monthly estimates of retail and food sales across the United States starting from 1992 to present day. The dataset is presented in a .txt file that contains two main sections. First a white-space separated table that contains the retail and food sales spending by year and month as a whole integer in millions of dollars. The second table presents the seasonal adjustment factor by year and month as a float. This figure provides consideration to natural ebbs and flows in consumer spending during seasonal events/periods (i.g. holidays). 
 
 Dataset 3: Civilian Unemployment Rate (LNS14000000)
+
 This dataset provides the monthly unemployment rate published by the United States Bureau of Labor Statistics (BLS) for the United States civilian labor force aged 16 and above. The data is presented in table form via a HTML with access to export as .xlsx file.The data table is in wide format with years (integers) as rows and twelve columns representing months. The unemployment rate by year and month is stored as floats (numbers containing decimals) which represent the percentage of the civilian population that has been surveyed to be unemployed. The data ranges from 2016 to 2026 and is modified to consider seasonal adjustment figures. 
 
 ## 3. Project Timeline
