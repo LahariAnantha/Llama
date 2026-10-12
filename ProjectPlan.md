@@ -87,7 +87,3 @@ We will use the following three datasets to investigate the relationship between
 - [ ] Review the final README to ensure all required sections, references, and artifact links are included.
 - [ ] Create the final GitHub release and prepare the submission for **December 7**.
 
-
-
-Why this format works better
-- Headings (#, ##, ###) make it
