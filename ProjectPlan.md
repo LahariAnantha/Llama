@@ -47,6 +47,21 @@ Dataset 3: Civilian Unemployment Rate (LNS14000000)
 
 This dataset provides the monthly unemployment rate published by the United States Bureau of Labor Statistics (BLS) for the United States civilian labor force aged 16 and above. The data is presented in table form via a HTML with access to export as .xlsx file.The data table is in wide format with years (integers) as rows and twelve columns representing months. The unemployment rate by year and month is stored as floats (numbers containing decimals) which represent the percentage of the civilian population that has been surveyed to be unemployed. The data ranges from 2016 to 2026 and is modified to consider seasonal adjustment figures. 
 
+## Relevance of chosen data sets:
+Our primary question involves exploring how inflation and unemployment relate to changing consumer spending. We picked three datasets that each measure one of those things, which will help us establish a relation between these variables.
+The CPI (CPIAUCSL) is the most straightforward way to measure how much prices go up, and FRED lets us download it easily as a monthly series. The CPI relates to inflation in our project. We will use it to calculate how fast prices are rising each month and each year. We also plan to use it to adjust retail sales for price changes, so we can tell the difference between people actually buying more and things just costing more.
+Following this we will use the Monthly Retail Trade Survey (MRTS)  dataset. This includes the census Bureau’s official count of how much people spend at stores and restaurants, which makes it a good relative measure of consumer spending. This data helps us answer our primary question of how spending is changing. We will calculate how sales change from month to month and compare those changes to inflation and unemployment. 
+Lastly we are using the Civilian Unemployment Rate (LNS14000000) dataset published by the Bureau of Labor Statistics which showcases the monthly unemployment rate in the country. When people lose jobs they have less purchasing power, so unemployment could affect spending. We will use it alongside inflation and compare spending during times of low and high unemployment.
+All three of our datasets come from U.S. government agencies, cover the whole country, are published monthly, and cover the same years. This helps us to establish a relation using the same years and months. Each one carries a different variable (prices, spending, and jobs), which is what we need to test our research question.
+
+## Integrate on month and year
+
+## Team: 
+
+Our team will divide responsibilities between the technical implementation and written documentations, where 2 team members will primarily focus on the technical components and the other 2 team members will focus on the documentation and reporting aspects of the project. The technical team will work on things like data acquisition, SHA-256 integrity verification, data profiling, exploratory data analysis, visualization and workflow automation. The documentation team will work on the data profiles, research on ethical and legal constraints, integration schema documentation, data dictionary and project reports. All of us will collaborate to interpret findings, identify challenges, and ensure the documentation accurately reflects the technical work. We will make sure that all the documentation and reports are in line with the technical work by having meetings where we discuss the technical decision we took and the reasoning behind it. The documentation and reporting team will also keep us updated on any coding that seems unethical and violates any of our constraints. We will all collaborate on the README, reviewing the repository and preparing the final submission. 
+
+
+
 ## 3. Project Timeline
 
 ### October 12–17: Further Research on Our Datasets
