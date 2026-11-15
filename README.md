@@ -24,6 +24,7 @@ The repository is organized to support reproducibility, data quality assessment,
 
 ## 2. Repository Structure
 
+```text
 Llama/
 ├── data/
 │   ├── raw/
@@ -52,7 +53,7 @@ Llama/
 ├── README.md
 ├── cleaning_log.md
 └── requirements.txt
-
+```
 
 
 ## 3. Directory Descriptions
