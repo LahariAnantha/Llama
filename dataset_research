@@ -1,0 +1,30 @@
+### Data Profiles
+  
+For this  project, we have been using 3 publicly available U.S. economic datasets. The first one we are using is the Consumer Price Index (CPI), which can be accessed through the Federal Reserve Economic Data (FRED) repository. This dataset provides us with monthly and seasonally adjusted index values that measure changes in prices paid by urban consumers. It contains date and index value columns and is primarily available in CSV data formats. 
+  
+Additionally the second dataset we are using is the U.S. Census Bureau's Monthly Retail Trade Survey (MRTS), which provides us monthly retail and food services sales estimates in millions of dollars across the United States. The original dataset contains multiple retail categories and statistical measures, and we are focusing on seasonally adjusted monthly retail and food services sales. This data was available in text-based formats and it required some filtering before we could analyse.  
+
+As for the third dataset, we are using the Bureau of Labor Statistics' Civilian Unemployment Rate dataset, which provides monthly, seasonally adjusted unemployment rates for the American workforce. This data can be exported in different formats, such as Excel, while our team is working with a JSON version for this project.  
+
+All the three datasets we are using contain monthly observations, making them suitable for examining economic and social trends over time. Based on our initial cleaning , we found out that our datasets have 956 CPI observations, 12 MRTS observations, and 32 unemployment observations. We will address these differences in the coming weeks by finding common overlap times periods so that we have consistency across our analysis. The original dataset sources and cleaned versions are documented in our project repository.
+
+### Ethical and Legal Constraints
+All the three datasets contain summed up national economic statistics rather than individual-level information, which minimizes the need for privacy and confidentiality screening. Since this data was published by U.S. federal agencies, most of this information is generally available in the public domain. However, we did come to a realization that individual datasets may have specific usage conditions, particularly when they are accessed through third-party repositories such as FRED.
+
+For the CPI dataset, we are going to be reviewing the licensing information associated with the specific FRED series we are pulling this dataset from to ensure that we follow any attribution or redistribution requirements it has embedded. Similarly, for the MRTS and unemployment datasets, we are going to refer to the original Census Bureau and Bureau of Labor Statistics sources to verify their terms of use and properly understand  the requirements of the data providers.
+
+We also found several limitations associated with out datasets, which are important for the ethical interpretation of our findings. The CPI primarily represents urban consumers and may not fully reflect the experiences of every U.S. household - primarily that of rural households. Additionally, since our analysis uses aggregated economic indicators, we cannot assume that relationships observed at the national level represent individual / geographical consumer behavior. We will also try and avoid presenting correlations between inflation, unemployment, and consumer spending as evidence of direct causal relationships since the dataset does not cover external circumstances 
+
+Overall, we aim to ensure that the datasets we have are used responsibly by acknowledging its original sources, documenting relevant limitations, and being transparent about the conclusions that can be drawn from our analysis.
+ 
+### Dataset Relevance and Integration
+  
+Each of the datasets picked by us addresses one component of our research question: the CPI dataset represents inflation, MRTS measures retail and food services spending, and unemployment data reflects labor market conditions. Since all three provide monthly observations at the national level, the year and month are the common attributes that allow us to integrate our datasets. As a whole, they will help us examine how changes in inflation and unemployment are associated with consumer spending trends.
+
+### Related Literature
+
+Two connected studies to our research question are first, Bachmann et al. (2012), in Inflation Expectations and Readiness to Spend, where they found that higher inflation expectations do not necessarily increase consumers' willingness to purchase durable goods in advance. Secondly we will be referencing Ganong and Noel (2019), in Consumer Spending During Unemployment, which examined how unemployment affects household spending, particularly when unemployment benefits expire. Both these studies will provide our team useful context for understanding the relationship between economic conditions and purchasing behavior.
+
+###Data Lifecycle Model
+
+The DataONE Data Life Cycle Model is the most aligned to our project because it emphasizes on planning, collecting, assuring, describing, preserving, discovering, integrating, and analyzing research data. It primarily provides our team with a structured framework for managing datasets from multiple sources while maintaining documentation, data quality, and reproducibility throughout the project.
