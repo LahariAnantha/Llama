@@ -38,5 +38,19 @@ Quality Assessment Documentation: Created data_quality.md to document the data s
 Data Challenges and Resolutions 
 One challenge involved differences in the formats and structures of the three source datasets. The CPI data is provided as a CSV, the BLS data is returned as JSON, and the MRTS data is returned through the Census API as a multi-series dataset. I addressed these differences by creating dataset-specific acquisition and profiling procedures while maintaining a consistent raw-data organization. The MRTS dataset presented an additional challenger because it contains multiple data types and retail categories. The profiling identified 6600 observations, including source-provided (S) and Z values and negative numeric values. These values were not automatically removed because their meaning depends on the specific MRTS measure. 
 
+Mihika Johar — Contributions to Current Milestone
+
+For this milestone, I focused on researching and documenting our three economic datasets: the Consumer Price Index (CPI), Monthly Retail Trade Survey (MRTS), and Civilian Unemployment Rate. I developed initial data profiles outlining their sources, formats, and characteristics, reviewed ethical and legal considerations, and examined how each dataset relates to our research question. I also identified year and month as the common attributes for integration, researched relevant academic literature, and selected the DataONE Data Life Cycle Model to guide our data management process.
+
+Challenges and Resolutions
+
+One challenge was determining how datasets from three different government sources could be meaningfully integrated, given their different structures, formats, and economic measures. I addressed this by identifying their shared monthly time dimension and examining how each dataset contributes to our research question about inflation, unemployment, and consumer spending.
+
+Another challenge was understanding the limitations of using aggregated economic statistics, particularly differences in data coverage, measurement methods, and seasonal adjustments. To address this, I documented these limitations and identified areas requiring further verification, including source-specific licensing conditions and compatibility across datasets.
+
+Progress and Next Steps
+
+The initial dataset research, literature review, and selection of the data lifecycle model have been completed. My next steps include verifying source-specific licensing requirements, reviewing the compatibility of the datasets' time periods and seasonal adjustments, and supporting the team's data integration and analysis process. I will also help ensure that our final analysis acknowledges the limitations of the datasets and avoids drawing unsupported causal conclusions.
+
 Progress and Next Steps 
 The data acquisition, integrity verification, and profiling workflows have been implemented and test successfully. The 3 raw datasets have been acquired and stored in the repository, SHA-256 checksums have been generated and verified, and initial data quality issues have been identified and documented. My remaining work includes reviewing the documentation for consistency with the implemented scripts, making any necessary refinements based on team feedback. 
