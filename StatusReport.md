@@ -78,13 +78,10 @@ Moving forward, I plan to review the documentation to make sure everything match
 For this milestone, I focused on data acquisition, data integrity verification, data profiling, and technical documentation to prepare our datasets for integration and further analysis. 
 
 Tasks Completed:
-Programmatic Data Acquisition: Developed `scripts/acquire_data.py` to programmatically retrieve the CPI, unemployment, and Monthly Retail Trade Survey(MRTS) datasets. The script downloads the CPI data from FRED, retrieves the civilian unemployment rate through the BLS API, and retrieves MRTS data through the Census API. The datasets are stored in /raw/ to maintain a consistent repository structure. 
-
-Data Integrity Verification: Developed `scripts/verify_integrity.py` to calculate and verify SHA-256 checksums for all 3 dataset. Checksum files are stored in data/checksums/. All 3 datasets successfully passed the initial integrity checks. 
-
-Data Profiling and Quality Assessment: Developed `scripts/profile_data.py`  to check for missing values, duplicate rows, duplicate observations, invalid dates, date ranges, categorical inconsistencies, non-numeric values, and numeric value ranges. The results were used to evaluate accuracy, completeness, timeliness and consistency. 
-
-Quality Assessment Documentation: Created `data_quality.md` documenting the data sources, acquisition and integrity workflow, profiling results, identified issues, and integration feasibility. The documentation also records dataset-specific limitations, including the missing CPI observation, unavailable BLS observation, source-provided special values in the MRTS dataset. 
+- Developed scripts/acquire_data.py to programmatically retrieve the CPI, unemployment, and MRTS datasets from FRED, the BLS API, and the Census API, respectively. The datasets are stored in data/raw/.
+- Developed scripts/verify_integrity.py to calculate and verify SHA-256 checksums for all three datasets. All datasets passed the initial integrity checks.
+- Developed scripts/profile_data.py to assess missing values, duplicates, invalid dates, categorical inconsistencies, non-numeric values, and numeric ranges. These results were used to evaluate accuracy, completeness, timeliness, and consistency.
+- Created data_quality.md documenting the data sources, acquisition and integrity workflows, profiling results, identified issues, and integration feasibility.
 
 Data Challenges and Resolutions 
 The 3 datasets differ in format and structure, with CPI provides as CSV, BLS as JSON and MRTS as a multi-series Census API dataset. Dataset-specific acquisition and profiling procedures were used to account for these differences. MRTS also contains source-provided special values and negative values, which were documented rather than automatically removed because their meaning depends on the specific measure. 
