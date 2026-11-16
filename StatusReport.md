@@ -21,3 +21,22 @@ Another challenge involved missing observations. The initial quality checks iden
 Progress and Next Steps:
 
 The initial cleaning scripts have been implemented and successfully tested, producing 956 cleaned CPI observations, 12 retail sales observations, and 32 unemployment observations. The repository structure, cleaning operations, and conceptual schema have also been documented. My remaining work includes reviewing the documentation for consistency with the implemented scripts and making any necessary refinements based on team feedback.
+
+
+## Anjali Penamutcha — Contributions to Current Milestone
+For this milestone, I focused on programmatic data acquisition, data integrity verification, data profiling, and technical documentation to prepare our datasets for integration and further analysis. 
+
+Tasks Completed:
+Programmatic Data Acquisition: Developed scripts/acquire_data.py to programmatically retrieve the CPI, unemployment, and Monthly Retail Trade Survey(MRTS) datasets. The script downloads the CPI data from FRED, retrieves the civilian unemployment rate through the BLS API, and retrieves MRTS data through the Census API. The datasets are stored in /raw/ to maintain a consistent repository structure. 
+
+Data Integrity Verification: Developed scripts/verify_integrity.py to calculate and verify SHA-256 checksums for each raw dataset. Checksum files are stored in data/checksums/. All 3 datasets successfully passed the initial integrity checks, providing a way to detect changes to the raw data after acquisition. 
+
+Data Profiling and Quality Assessment: Developed scripts/profile_data.py to profile the CPI, unemployment, and MRTS datasets. The script checks for missing values, duplicate rows, duplicate observations, invalid dates, date ranges, categorical inconsistencies, non-numeric values, and numeric value ranges. The profiling results were used to evaluate the datasets across the 4 required quality dimensions: accuracy, completeness, timeliness and consistency. 
+
+Quality Assessment Documentation: Created data_quality.md to document the data sources, acquisition workflow, integrity verification process, profiling procedures, identified quality issues, and integration feasibility. The documentation also records dataset-specific limitations, including the missing CPI observation, unavailable BLS observation, source-provided special values in the MRTS dataset. 
+
+Data Challenges and Resolutions 
+One challenge involved differences in the formats and structures of the three source datasets. The CPI data is provided as a CSV, the BLS data is returned as JSON, and the MRTS data is returned through the Census API as a multi-series dataset. I addressed these differences by creating dataset-specific acquisition and profiling procedures while maintaining a consistent raw-data organization. The MRTS dataset presented an additional challenger because it contains multiple data types and retail categories. The profiling identified 6600 observations, including source-provided (S) and Z values and negative numeric values. These values were not automatically removed because their meaning depends on the specific MRTS measure. 
+
+Progress and Next Steps 
+The data acquisition, integrity verification, and profiling workflows have been implemented and test successfully. The 3 raw datasets have been acquired and stored in the repository, SHA-256 checksums have been generated and verified, and initial data quality issues have been identified and documented. My remaining work includes reviewing the documentation for consistency with the implemented scripts, making any necessary refinements based on team feedback. 
