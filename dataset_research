@@ -8,6 +8,10 @@ As for the third dataset, we are using the Bureau of Labor Statistics' Civilian 
 
 All the three datasets we are using contain monthly observations, making them suitable for examining economic and social trends over time. Based on our initial cleaning , we found out that our datasets have 956 CPI observations, 12 MRTS observations, and 32 unemployment observations. We will address these differences in the coming weeks by finding common overlap times periods so that we have consistency across our analysis. The original dataset sources and cleaned versions are documented in our project repository.
 
+1. Consumer Price Index - https://fred.stlouisfed.org/series/CPIAUCSL
+2. Monthly Trade Index - https://www.census.gov/retail/data.html
+3. Civilian Unemployement Rate - https://fred.stlouisfed.org/series/UNRATE
+
 ### Ethical and Legal Constraints
 All the three datasets contain summed up national economic statistics rather than individual-level information, which minimizes the need for privacy and confidentiality screening. Since this data was published by U.S. federal agencies, most of this information is generally available in the public domain. However, we did come to a realization that individual datasets may have specific usage conditions, particularly when they are accessed through third-party repositories such as FRED.
 
@@ -24,6 +28,11 @@ Each of the datasets picked by us addresses one component of our research questi
 ### Related Literature
 
 Two connected studies to our research question are first, Bachmann et al. (2012), in Inflation Expectations and Readiness to Spend, where they found that higher inflation expectations do not necessarily increase consumers' willingness to purchase durable goods in advance. Secondly we will be referencing Ganong and Noel (2019), in Consumer Spending During Unemployment, which examined how unemployment affects household spending, particularly when unemployment benefits expire. Both these studies will provide our team useful context for understanding the relationship between economic conditions and purchasing behavior.
+
+1. Bachmann et al. (2012) - Inflation Expectation and Readiness to spend 
+   https://www.nber.org/system/files/working_papers/w17958/w17958.pdf
+2. Ganong and Noel (2019) - Consumer Spending during Unemployement 
+   https://www.aeaweb.org/articles?id=10.1257/aer.20170537
 
 ###Data Lifecycle Model
 
