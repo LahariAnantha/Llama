@@ -110,30 +110,25 @@ For this milestone, I focused on integrating the three cleaned economic datasets
 
 Data Integration: 
 
-Developed scripts/integrate_data.py to integrate the cleaned CPI, retail sales, and unemployment datasets using Python and pandas. I first loaded the three cleaned CSV files, converting their date columns into datetime objects using parse_dates. Since all three datasets contained monthly observations with a common date attribute, I used two inner joins to combine them. The first joined retail sales with CPI, while the second added unemployment data. Inner joins ensured that only months present in all three datasets were retained. I then selected the four relevant columns (date, cpi, unemployment_rate, and sales_millions) and saved the resulting 11 observations to data/processed/integrated.csv. October 2025 was excluded because it was not available across all three cleaned datasets.
-
-The dataset is called integrated.csv and is under the data/processed folder. It contains 11 monthly observations from 2025.
+Developed scripts/integrate_data.py to integrate the cleaned CPI, retail sales, and unemployment datasets using the pandas library. I loaded the three cleaned CSV files, and transformed their date columns into datetime objects using parse_dates. As all three datasets contained monthly observations with a common date attribute. I used two inner joins to combine them. The first joined retail sales with CPI, and the second added unemployment data. Inner joins ensured that only months present in all three datasets were retained. I then filtered to the four relevant columns (date, cpi, unemployment_rate, and sales_millions) and saved the resulting 11 observations to data/processed/integrated.csv. October 2025 was excluded because it was not available across all three cleaned datasets.
 
 Post-Integration Data Quality Assessment:
 
-Within the integrate_data.py script I also included checks for missing values (date, cpi, unemployment, sales), duplicate observations, and date range. Through the review of the table outputted by these checks I affirmed that the dataset contained 0 missing values, 0 duplicates, and the date range encompassed the entire year affiriming the completeness of the dataset as well (except Oct 2025 is incomplete due to it not being present in the CPI dataset). 
+Within the integrate_data.py script I included checks for missing values (date, cpi, unemployment, sales), duplicate observations, and date range. Through reviewing the output it's affirmed that there are 0 missing values, 0 duplicates, and the date range encompassed the entire year except Oct 2025 marking high completeness of the dataset. 
 
 Exploratory Data Analysis: 
 
-After confirming the quality and completeness of the integrated dataset I utilized the dataset to calculate the descriptive statistics and Pearson correlations for the three economic metrics. This analysis found that there is a positive correlation of 0.88 between Consumer Price Index and Retail Sale and a positive correlation of 0.73 between unemployment rates and retail sales. 
+I calculated summary statistics for the integrated dataset along with Pearson correlations for the three economic metrics. This found a positive correlation of 0.88 between Consumer Price Index and Retail Sale and a positive correlation of 0.73 between unemployment rates and retail sales. 
 
 Visualizations: 
 
-Fromt the dataset, I generated a CPI vs. Retail Sales scatterplot to explore the relationship between the two metrics across 2025 and also created a more complex multi-graph visualization that compares the trendline of all three metrics throughout 2025 to explore more on how each independently moved in 2025 and compare the similarity and dissimilarity of those movements.
-These visualizations are called cpi_vs_sales.png and monthly_metric_trends.png respectively and are under the figures folder.
-
-The visualizations revealed that CPI and retail sales generally increased across the year 2025, while unemployment fluctuated between 4.0% 4.5% and that all the metrics peaked at December 2025. 
+I created two visualizations. 'CPI vs. Retail Sales' (data/figures/cpi_vs_sales.png) scatterplot explored the relationship between the two metrics across 2025 and '2025 CPI, Unemployment, and Retail Sales Trend'(data/figures/monthly_metric_trends.png) showcases the trend of all three metrics throughout 2025 independently. The visualizations revealed that CPI and retail sales generally increased across the year 2025, while unemployment fluctuated between 4.0% 4.5%, and all the metrics peaked in December. 
 
 
 Challenges and Resolutions: 
 
-One challenge was the slight difference in observation counts and date coverage across the datasets due to October 2025 not being present in the cleaned CPI and unemployment datasets. For that reason, I used inner joins to retain only months with complete observations rather than estimating the missing values.
+October 2025 was missing from the cleaned CPI and unemployment dataset, creating a slight difference in data coverage. To resolve, I used inner joins to retain only observations present in all three datasets.
 
 Progress and Next Steps:
 
-The data cleaning, integration, inital analysis, and visualization have now been completed and tested. Tasks for the next milestone could include expanding the dataset date range and further conducting deeper analysis to better understand the relationships between economic conditions and consumer spending via the datasets created getting closer to answering the core research question. 
+Data cleaning, integration, initial analysis, and visualizations are complete and tested. Future tasks could include expanding the dataset date range and further conducting deeper analysis to better understand the relationships between economic conditions and consumer spending. 
