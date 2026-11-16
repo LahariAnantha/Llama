@@ -1,16 +1,5 @@
 ## Updated Project Timeline
 
-### November 16–20: Data Analysis, Workflow Automation, and Interim Report
-**Status: In Progress**
-
-**Remaining Tasks:**
-- Complete and validate the integration of CPI, MRTS, and unemployment datasets.
-- Conduct post-integration data quality checks.
-- Begin exploratory data analysis and generate preliminary visualizations.
-- Develop and test `run_all.py` to automate the data processing workflow.
-- Finalize documentation for cleaning, integration, and workflow execution.
-- Complete `StatusReport.md`, including project progress, challenges, timeline updates, and individual contributions.
-
 **Artifacts:**
 - [integrate_data.py](scripts/integrate_data.py)
 - [run_all.py](scripts/run_all.py)
@@ -20,11 +9,8 @@
 - `data/processed/integrated.csv`
 - Preliminary analysis and visualization outputs (to be created)
 
-**Expected Completion:** November 20, 2026  
-**Interim Report Due:** November 19, 2026
 
 ### November 23–29: Final Analysis and Documentation
-**Status: Not Yet Started**
 
 **Remaining Tasks:**
 - Finalize data analysis and visualizations.
@@ -43,10 +29,8 @@
 - Final analysis scripts and visualizations (to be created)
 - Finalized `data/processed/integrated.csv`
 
-**Expected Completion:** November 29, 2026
 
 ### November 30–December 6: Reproducibility Testing and Final Submission
-**Status: Not Yet Started**
 
 **Remaining Tasks:**
 - Test the full workflow from a fresh GitHub repository clone.
