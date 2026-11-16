@@ -1,30 +1,102 @@
 ## Changes to Project Plan 
 Our project is currently on track with the original project plan, and we have not needed to make any changes to the planned timeline or overall approach. 
 
+
+## Updated Project Timeline
+
+### November 16–20: Data Analysis, Workflow Automation, and Interim Report
+**Status: In Progress**
+
+**Remaining Tasks:**
+- Complete and validate the integration of CPI, MRTS, and unemployment datasets.
+- Conduct post-integration data quality checks.
+- Begin exploratory data analysis and generate preliminary visualizations.
+- Develop and test `run_all.py` to automate the data processing workflow.
+- Finalize documentation for cleaning, integration, and workflow execution.
+- Complete `StatusReport.md`, including project progress, challenges, timeline updates, and individual contributions.
+
+**Artifacts:**
+- [integrate_data.py](scripts/integrate_data.py)
+- [run_all.py](scripts/run_all.py)
+- [cleaning_log.md](cleaning_log.md)
+- [integration_schema.md](integration_schema.md)
+- [StatusReport.md](StatusReport.md)
+- `data/processed/integrated.csv`
+- Preliminary analysis and visualization outputs (to be created)
+
+**Expected Completion:** November 20, 2026  
+**Interim Report Due:** November 19, 2026
+
+### November 23–29: Final Analysis and Documentation
+**Status: Not Yet Started**
+
+**Remaining Tasks:**
+- Finalize data analysis and visualizations.
+- Interpret findings on the relationship between inflation, unemployment, and consumer spending.
+- Create a data dictionary documenting variables across the datasets.
+- Develop a machine-readable metadata file using DCAT, DataCite, or Schema.org.
+- Update `README.md` with findings, challenges, limitations, and references.
+- Review and finalize all project documentation.
+- Ensure all scripts, datasets, and artifacts are properly organized and linked in the repository.
+
+**Artifacts:**
+- [README.md](README.md)
+- [data_quality.md](data_quality.md)
+- `data_dictionary.md` (to be created)
+- Machine-readable metadata file (to be created)
+- Final analysis scripts and visualizations (to be created)
+- Finalized `data/processed/integrated.csv`
+
+**Expected Completion:** November 29, 2026
+
+### November 30–December 6: Reproducibility Testing and Final Submission
+**Status: Not Yet Started**
+
+**Remaining Tasks:**
+- Test the full workflow from a fresh GitHub repository clone.
+- Verify that all scripts execute successfully using relative paths.
+- Finalize `requirements.txt` with Python dependencies and version numbers.
+- Confirm that the workflow reproduces the expected datasets and outputs.
+- Review the final README and documentation for completeness.
+- Verify that all team contributions are committed to GitHub.
+- Create the final GitHub release and prepare the submission.
+
+**Artifacts:**
+- [run_all.py](scripts/run_all.py)
+- [README.md](README.md)
+- `requirements.txt`
+- Final reproducible datasets and analysis outputs
+- Final GitHub release (to be created)
+
+**Expected Completion:** December 6, 2026  
+**Final Submission Due:** December 7, 2026
+
+
 ## Lahari Anantha — Contributions to Current Milestone
 
-For this milestone, I focused on data cleaning, repository organization, and technical documentation to prepare our datasets for further analysis.
+For this milestone, I mainly worked on data cleaning and documentation to make sure our datasets were consistent and ready for further analysis.
 
-Tasks Completed:
+### Tasks Completed
 
-Data Cleaning Scripts: Developed scripts/clean_data.py to clean and standardize the CPI, MRTS, and unemployment datasets. Implemented data type conversions, date standardization, missing-value handling, duplicate detection, and validation checks. The script successfully generated cleaned versions of all three datasets in data/processed/.
+- **Data Cleaning Scripts:** I developed `scripts/clean_data.py` to clean the CPI, MRTS, and unemployment datasets. This included standardizing dates and column names, converting values into the correct data types, checking for duplicates, and handling missing values. The script successfully generated cleaned versions of all three datasets in `data/processed/`.
 
-Repository Structure and Documentation: Updated README.md to document the GitHub repository's structure, file organization, naming conventions, and the purpose of each script and dataset. Established documentation outlining how raw data, processed data, and project scripts are organized to support reproducibility.
+- **Repository Structure and Documentation:** I updated `README.md` to explain how our GitHub repository is organized, including the purpose of each folder, script, and dataset. I also added file naming conventions to make the repository easier to navigate and understand.
 
-Cleaning Operations Documentation: Created cleaning_log.md to document the cleaning procedures performed on each dataset, including the data quality issues identified, transformations applied, and resulting improvements. Recorded the number of observations before and after cleaning and explained decisions regarding missing values and data filtering.
+- **Cleaning Operations Documentation:** I created `cleaning_log.md` to explain the cleaning steps performed on each dataset and how they addressed the data quality issues we identified. I also included the number of observations before and after cleaning and explained why certain values were removed or filtered out.
 
-Conceptual Integration Schema: Developed integration_schema.md to document the structure of the three datasets, their key attributes, and the common monthly date field that establishes relationships between them. Defined a consistent schema to support subsequent analysis.
+- **Conceptual Integration Schema:** I created `integration_schema.md` to outline the structure of our three datasets and identify the common date attribute they share. This helps explain how the datasets relate to one another and how they can be used together for our analysis.
 
-Challenges and Resolutions:
+### Challenges and Resolutions
 
-One challenge involved differences in the formats of the three source datasets. The CPI data was provided as a CSV, MRTS contained multiple categories and statistical measures, and unemployment data was stored in JSON format. I addressed these differences by developing dataset-specific cleaning functions that standardized column names, dates, and numerical values.
+One challenge I faced was that our three datasets had different formats. CPI was stored as a CSV, MRTS contained multiple categories and statistical measures, and unemployment was stored as a JSON file. To address this, I created separate cleaning functions for each dataset to make sure the dates, column names, and values were standardized.
 
-Another challenge involved missing observations. The initial quality checks identified one missing CPI value and one missing unemployment rate for October 2025. These observations were excluded rather than estimated to avoid introducing unsupported values. Additionally, the MRTS dataset contained 6,660 records across multiple statistical categories, requiring filtering to retain the 12 seasonally adjusted monthly retail and food services sales observations relevant to our research scope.
+Another issue was identifying missing values in our datasets. We found one missing CPI value and one missing unemployment rate for October 2025. I removed these observations rather than filling them with estimated values to avoid introducing inaccurate data. I also had to filter the MRTS dataset, which originally contained 6,660 records, to select the 12 monthly observations that were relevant to our research question.
 
-Progress and Next Steps:
+### Progress and Next Steps
 
-The initial cleaning scripts have been implemented and successfully tested, producing 956 cleaned CPI observations, 12 retail sales observations, and 32 unemployment observations. The repository structure, cleaning operations, and conceptual schema have also been documented. My remaining work includes reviewing the documentation for consistency with the implemented scripts and making any necessary refinements based on team feedback.
+So far, I have completed and tested the cleaning script, which resulted in 956 CPI observations, 12 retail sales observations, and 32 unemployment observations. I also completed the repository documentation, cleaning log, and conceptual integration schema.
 
+Moving forward, I plan to review the documentation to make sure everything matches our current scripts and make any necessary updates based on team feedback.
 
 ## Anjali Penamutcha — Contributions to Current Milestone
 For this milestone, I focused on data acquisition, data integrity verification, data profiling, and technical documentation to prepare our datasets for integration and further analysis. 
