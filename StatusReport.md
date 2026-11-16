@@ -55,3 +55,38 @@ Another challenge was understanding the limitations of using aggregated economic
 Progress and Next Steps
 
 The initial dataset research, literature review, and selection of the data lifecycle model have been completed. My next steps include verifying source-specific licensing requirements, reviewing the compatibility of the datasets' time periods and seasonal adjustments, and supporting the team's data integration and analysis process. I will also help ensure that our final analysis acknowledges the limitations of the datasets and avoids drawing unsupported causal conclusions.
+
+
+### Ananya Kavatekar - Contribution to Current Milestone
+
+For this milestone, I focused on integrating the three cleaned economic datasets (consumer price index, unemployement rate, and retail sales), assured the integration efficacy through quality and completeness checks, and performed some initial exploratory data analysis to explore the relationship between inflation indicated by the consumer price index, the unemployment rate, and consumer spending through retail sales.
+
+Data Integration: 
+
+Developed scripts/integrate_data.py to integrate the cleaned CPI, retail sales, and unemployment datasets using Python and pandas. I first loaded the three cleaned CSV files, converting their date columns into datetime objects using parse_dates. Since all three datasets contained monthly observations with a common date attribute, I used two inner joins to combine them. The first joined retail sales with CPI, while the second added unemployment data. Inner joins ensured that only months present in all three datasets were retained. I then selected the four relevant columns (date, cpi, unemployment_rate, and sales_millions) and saved the resulting 11 observations to data/processed/integrated.csv. October 2025 was excluded because it was not available across all three cleaned datasets.
+
+The dataset is called integrated.csv and is under the data/processed folder. It contains 11 monthly observations from 2025.
+
+Post-Integration Data Quality Assessment:
+
+Within the integrate_data.py script I also included checks for missing values (date, cpi, unemployment, sales), duplicate observations, and date range. Through the review of the table outputted by these checks I affirmed that the dataset contained 0 missing values, 0 duplicates, and the date range encompassed the entire year affiriming the completeness of the dataset as well (except Oct 2025 is incomplete due to it not being present in the CPI dataset). 
+
+Exploratory Data Analysis: 
+
+After confirming the quality and completeness of the integrated dataset I utilized the dataset to calculate the descriptive statistics and Pearson correlations for the three economic metrics. This analysis found that there is a positive correlation of 0.88 between Consumer Price Index and Retail Sale and a positive correlation of 0.73 between unemployment rates and retail sales. 
+
+Visualizations: 
+
+Fromt the dataset, I generated a CPI vs. Retail Sales scatterplot to explore the relationship between the two metrics across 2025 and also created a more complex multi-graph visualization that compares the trendline of all three metrics throughout 2025 to explore more on how each independently moved in 2025 and compare the similarity and dissimilarity of those movements.
+These visualizations are called cpi_vs_sales.png and monthly_metric_trends.png respectively and are under the figures folder.
+
+The visualizations revealed that CPI and retail sales generally increased across the year 2025, while unemployment fluctuated between 4.0% 4.5% and that all the metrics peaked at December 2025. 
+
+
+Challenges and Resolutions: 
+
+One challenge was the slight difference in observation counts and date coverage across the datasets due to October 2025 not being present in the cleaned CPI and unemployment datasets. For that reason, I used inner joins to retain only months with complete observations rather than estimating the missing values.
+
+Progress and Next Steps:
+
+The data cleaning, integration, inital analysis, and visualization have now been completed and tested. Tasks for the next milestone could include expanding the dataset date range and further conducting deeper analysis to better understand the relationships between economic conditions and consumer spending via the datasets created getting closer to answering the core research question. 
