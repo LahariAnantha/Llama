@@ -1,15 +1,5 @@
 ## Updated Project Timeline
 
-**Artifacts:**
-- [integrate_data.py](scripts/integrate_data.py)
-- [run_all.py](scripts/run_all.py)
-- [cleaning_log.md](cleaning_log.md)
-- [integration_schema.md](integration_schema.md)
-- [StatusReport.md](StatusReport.md)
-- `data/processed/integrated.csv`
-- Preliminary analysis and visualization outputs (to be created)
-
-
 ### November 23–29: Final Analysis and Documentation
 
 **Remaining Tasks:**
