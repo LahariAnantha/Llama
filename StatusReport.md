@@ -80,18 +80,17 @@ For this milestone, I focused on data acquisition, data integrity verification, 
 Tasks Completed:
 Programmatic Data Acquisition: Developed `scripts/acquire_data.py` to programmatically retrieve the CPI, unemployment, and Monthly Retail Trade Survey(MRTS) datasets. The script downloads the CPI data from FRED, retrieves the civilian unemployment rate through the BLS API, and retrieves MRTS data through the Census API. The datasets are stored in /raw/ to maintain a consistent repository structure. 
 
-Data Integrity Verification: Developed `scripts/verify_integrity.py` to calculate and verify SHA-256 checksums for each raw dataset. Checksum files are stored in data/checksums/. All 3 datasets successfully passed the initial integrity checks, providing a way to detect changes to the raw data after acquisition. 
+Data Integrity Verification: Developed `scripts/verify_integrity.py` to calculate and verify SHA-256 checksums for all 3 dataset. Checksum files are stored in data/checksums/. All 3 datasets successfully passed the initial integrity checks. 
 
-Data Profiling and Quality Assessment: Developed `scripts/profile_data.py` to profile the CPI, unemployment, and MRTS datasets. The script checks for missing values, duplicate rows, duplicate observations, invalid dates, date ranges, categorical inconsistencies, non-numeric values, and numeric value ranges. The profiling results were used to evaluate the datasets across the 4 required quality dimensions: accuracy, completeness, timeliness and consistency. 
+Data Profiling and Quality Assessment: Developed `scripts/profile_data.py`  to check for missing values, duplicate rows, duplicate observations, invalid dates, date ranges, categorical inconsistencies, non-numeric values, and numeric value ranges. The results were used to evaluate accuracy, completeness, timeliness and consistency. 
 
-Quality Assessment Documentation: Created `data_quality.md` to document the data sources, acquisition workflow, integrity verification process, profiling procedures, identified quality issues, and integration feasibility. The documentation also records dataset-specific limitations, including the missing CPI observation, unavailable BLS observation, source-provided special values in the MRTS dataset. 
+Quality Assessment Documentation: Created `data_quality.md` documenting the data sources, acquisition and integrity workflow, profiling results, identified issues, and integration feasibility. The documentation also records dataset-specific limitations, including the missing CPI observation, unavailable BLS observation, source-provided special values in the MRTS dataset. 
 
 Data Challenges and Resolutions 
-One challenge involved differences in the formats and structures of the three source datasets. The CPI data is provided as a CSV, the BLS data is returned as JSON, and the MRTS data is returned through the Census API as a multi-series dataset. I addressed these differences by creating dataset-specific acquisition and profiling procedures while maintaining a consistent raw-data folder. The MRTS dataset presented an additional challenge because it contains multiple data types and retail categories. The profiling identified 6600 observations, including source-provided (S) and Z values and negative numeric values. These values were not automatically removed because their meaning depends on the specific MRTS measure. 
+The 3 datasets differ in format and structure, with CPI provides as CSV, BLS as JSON and MRTS as a multi-series Census API dataset. Dataset-specific acquisition and profiling procedures were used to account for these differences. MRTS also contains source-provided special values and negative values, which were documented rather than automatically removed because their meaning depends on the specific measure. 
 
 Progress and Next Steps 
-The data acquisition, integrity verification, and profiling workflows have been implemented and test successfully. The 3 raw datasets have been acquired and stored in the repository, SHA-256 checksums have been generated and verified, and initial data quality issues have been identified and documented. My remaining work includes reviewing the documentation for consistency with the implemented scripts, making any necessary refinements based on team feedback. 
-
+The data acquisition, integrity verification, and profiling workflows have been implemented and tested, and the identified quality issues have been documented. The remaining work is to review the documentation for consistency with the scripts and make any necessary refinements based on team feedback. 
 
 ### Mihika Johar — Contributions to Current Milestone
 
