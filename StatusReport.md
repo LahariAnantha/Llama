@@ -45,6 +45,9 @@
 ## Changes to Project Plan 
 Our project is currently on track with the original project plan, and we have not needed to make any changes to the planned timeline or overall approach. 
 
+## Challenges Overview 
+Majority of our challenges were related to to data acquisition, cleaning, and integration. This primarily happened because our three datasets came from different government sources, which has different formats, structures, and measurement methods, which made it difficult to directly combine them. We tried to tackle this by developing dataset-specific scripts to standardize the given column names, date formats, and numerical values. Another big challenge we faced was handling missing observations, particularly for October 2025 in the CPI and unemployment datasets. Instead of estimating missing values, we chose to excluded incomplete months during integration, resulting in 11 complete monthly observations instead. Additionally, the MRTS dataset contained thousands of records across different categories, this included special values that needed careful interpretation. We addressed this part by  profiling the data and filtering it so that it only retains relevant  observations. We also did validation checks for missing values, duplicates, and inconsistencies to ensure the consistency and quality. Finally, the differences in data coverage and seasonal adjustments brought us challenges when interpreting relationships between economic indicators. We documented these limitations and identified areas that will need further verification before we conduct deeper analysis.
+
 ## Lahari Anantha — Contributions to Current Milestone
 
 For this milestone, I mainly worked on data cleaning and documentation to make sure our datasets were consistent and ready for further analysis.
@@ -92,17 +95,17 @@ The data acquisition, integrity verification, and profiling workflows have been 
 
 ### Mihika Johar — Contributions to Current Milestone
 
-For this milestone, I focused on researching and documenting our three economic datasets: the Consumer Price Index (CPI), Monthly Retail Trade Survey (MRTS), and Civilian Unemployment Rate. I developed initial data profiles outlining their sources, formats, and characteristics, reviewed ethical and legal considerations, and examined how each dataset relates to our research question. I also identified year and month as the common attributes for integration, researched relevant academic literature, and selected the DataONE Data Life Cycle Model to guide our data management process.
+For this milestone, I focused on researching and documenting our three economic datasets: the Consumer Price Index (CPI), Monthly Retail Trade Survey (MRTS), and Civilian Unemployment Rate. I developed initial profiles outlining their sources, formats, and characteristics, reviewed ethical and legal considerations, and evaluated how each of our datasets relate to our research question. I also figured year and month as the common attributes for integration, researched relevant academic literature, and selected the DataONE Data Life Cycle Model to guide our data management process.
 
 Challenges and Resolutions
 
-One challenge was determining how datasets from three different government sources could be meaningfully integrated, given their different structures, formats, and economic measures. I addressed this by identifying their shared monthly time dimension and examining how each dataset contributes to our research question about inflation, unemployment, and consumer spending.
+A big challenge was determining how 3 different government sourced datasets could be integrated, since they had  different structures, formats, and economic measures. I addressed this by identifying their shared monthly time dimension and then examined the overlaps and contributions it gave to our research question. 
 
-Another challenge was understanding the limitations of using aggregated economic statistics, particularly differences in data coverage, measurement methods, and seasonal adjustments. To address this, I documented these limitations and identified areas requiring further verification, including source-specific licensing conditions and compatibility across datasets.
+Another challenge I faced was understanding the limitations of using aggregated economic statistics, particularly differences in data coverage, measurement methods, and seasonal adjustments. I documented these limitations and identified areas requiring further verification, including source-specific licensing conditions and compatibility  to address this. 
 
 Progress and Next Steps
 
-The initial dataset research, literature review, and selection of the data lifecycle model have been completed. My next steps include verifying source-specific licensing requirements, reviewing the compatibility of the datasets' time periods and seasonal adjustments, and supporting the team's data integration and analysis process. I will also help ensure that our final analysis acknowledges the limitations of the datasets and avoids drawing unsupported causal conclusions.
+The initial dataset research, literature review, and selection of the data lifecycle model have been completed. My next steps include verifying source-specific licensing requirements, reviewing the compatibility of the time periods and seasonal adjustments, and supporting the team's data integration and analysis process by making sure we avoid drawing unsupported causal conclusions.
 
 
 ### Ananya Kavatekar - Contribution to Current Milestone
