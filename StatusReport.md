@@ -42,7 +42,7 @@ Progress and Next Steps
 The data acquisition, integrity verification, and profiling workflows have been implemented and test successfully. The 3 raw datasets have been acquired and stored in the repository, SHA-256 checksums have been generated and verified, and initial data quality issues have been identified and documented. My remaining work includes reviewing the documentation for consistency with the implemented scripts, making any necessary refinements based on team feedback. 
 
 
-Mihika Johar — Contributions to Current Milestone
+### Mihika Johar — Contributions to Current Milestone
 
 For this milestone, I focused on researching and documenting our three economic datasets: the Consumer Price Index (CPI), Monthly Retail Trade Survey (MRTS), and Civilian Unemployment Rate. I developed initial data profiles outlining their sources, formats, and characteristics, reviewed ethical and legal considerations, and examined how each dataset relates to our research question. I also identified year and month as the common attributes for integration, researched relevant academic literature, and selected the DataONE Data Life Cycle Model to guide our data management process.
 
