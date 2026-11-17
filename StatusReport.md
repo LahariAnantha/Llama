@@ -118,12 +118,11 @@ Within the integrate_data.py script I included checks for missing values (date, 
 
 Exploratory Data Analysis: 
 
-I calculated summary statistics for the integrated dataset along with Pearson correlations for the three economic metrics. This found a positive correlation of 0.88 between Consumer Price Index and Retail Sale and a positive correlation of 0.73 between unemployment rates and retail sales. 
+I used scripts/initial_analysis.py to calculate summary statistics and Pearson correlations for the three economic metrics. This found positive correlations of 0.88 between CPI and retail sales and 0.73 between unemployment and retail sales. The results were saved as summary_statistics.csv and correlations.csv in data/processed/.
 
 Visualizations: 
 
-I created two visualizations. 'CPI vs. Retail Sales' (data/figures/cpi_vs_sales.png) scatterplot explored the relationship between the two metrics across 2025 and '2025 CPI, Unemployment, and Retail Sales Trend'(data/figures/monthly_metric_trends.png) showcases the trend of all three metrics throughout 2025 independently. The visualizations revealed that CPI and retail sales generally increased across the year 2025, while unemployment fluctuated between 4.0% 4.5%, and all the metrics peaked in December. 
-
+I used scripts/initial_visualization.py to generate two visualizations: a CPI vs. Retail Sales scatterplot (figures/cpi_vs_sales.png) and a monthly trends visualization (figures/monthly_metric_trends.png) which compared all three economic metrics across 2025. It showed that CPI and retail sales generally increased throughout the year, while unemployment fluctuated between 4.0% and 4.5%. Also, CPI and retail sales peaked in December, while unemployment peaked in November.
 
 Challenges and Resolutions: 
 
@@ -131,4 +130,4 @@ October 2025 was missing from the cleaned CPI and unemployment dataset, creating
 
 Progress and Next Steps:
 
-Data cleaning, integration, initial analysis, and visualizations are complete and tested. Future tasks could include expanding the dataset date range and further conducting deeper analysis to better understand the relationships between economic conditions and consumer spending. 
+Data cleaning, integration, initial analysis, and visualizations are complete and tested. I also separated integration, analysis, and visualization into independent scripts and developed scripts/run_all.py to execute the workflow in sequence. Future work could include expanding the dataset's date range and conducting deeper analysis of the relationships between economic conditions and consumer spending.
