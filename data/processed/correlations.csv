@@ -1,0 +1,4 @@
+,cpi,unemployment_rate,sales_millions
+cpi,1.0,0.84,0.88
+unemployment_rate,0.84,1.0,0.73
+sales_millions,0.88,0.73,1.0
